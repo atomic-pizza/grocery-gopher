@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grocery Calculator</title>
+<link rel="icon" type="image/png" href="icons/groceryGopher.png">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#22C55E">
+</head>
+<body>
+
+<header class="hero">
+
+    <h1 class="app-title">
+
+        <img src="icons/groceryGopher.png"
+             alt="GroceryGopher"
+             class="logo">
+
+        <span class="grocery">
+            Grocery
+        </span>
+
+        <span class="gopher">
+            Gopher
+        </span>
+
+    </h1>
+
+    <p class="tagline">
+        Find the best value before it burrows into your budget.
+    </p>
+
+    <p class="welcome">
+    Ready to find the best deal?
+</p>
+
+</header>
+
+<div class="card">
+    <h2>Price per Ounce → Pound</h2>
+
+    <input
+        type="number"
+        step="0.01"
+        id="ozPrice"
+        placeholder="Enter price per ounce">
+
+    <button onclick="convertToPound()">
+        Convert
+    </button>
+
+    <p id="lbResult"></p>
+</div>
+
+<div class="card">
+    <h2>Price per Pound → Ounce</h2>
+
+    <input
+        type="number"
+        step="0.01"
+        id="lbPrice"
+        placeholder="Enter price per pound">
+
+    <button onclick="convertToOunce()">
+        Convert
+    </button>
+
+    <p id="ozResult"></p>
+</div>
+
+<div class="card">
+    <h2>Package Price Calculator</h2>
+
+    <input
+        type="number"
+        step="0.01"
+        id="packagePrice"
+        placeholder="Package Price">
+
+    <input
+        type="number"
+        step="0.01"
+        id="packageWeight"
+        placeholder="Weight (lbs)">
+
+    <button onclick="calculateUnitPrice()">
+        Calculate
+    </button>
+
+    <p id="unitResult"></p>
+</div>
+
+<div class="card">
+
+    <h2>Compare Two Products</h2>
+
+    <h3>Package A</h3>
+
+    <input
+        type="number"
+        step="0.01"
+        id="priceA"
+        placeholder="Price">
+
+    <input
+        type="number"
+        step="0.01"
+        id="weightA"
+        placeholder="Weight (lbs)">
+
+    <h3>Package B</h3>
+
+    <input
+        type="number"
+        step="0.01"
+        id="priceB"
+        placeholder="Price">
+
+    <input
+        type="number"
+        step="0.01"
+        id="weightB"
+        placeholder="Weight (lbs)">
+
+    <button onclick="compareProducts()">
+        Compare Products
+    </button>
+
+    <p id="compareResult"></p>
+
+</div>
+
+<div class="card clear-card">
+
+    <button onclick="clearAll()">
+        Clear All Values
+    </button>
+
+</div>
+
+<script src="app.js"></script>
+
+<div class="footer">
+    <div>&copy; 2026 Nephera Labs</div>
+    <div class="footer-subtitle">
+        GroceryGopher v1.0 • A Nephera Labs App
+    </div>
+</div>
+
+</body>
+</html>
